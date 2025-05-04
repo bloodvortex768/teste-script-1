@@ -4,28 +4,6 @@ local UI = Lib:Create{
    Theme = "Dark", -- ou qualquer outro tema
    Size = UDim2.new(0, 555, 0, 400) -- tamanho padrão
 }
-
-local Main = UI:Tab{
-   Name = "Inicio"
-}
-
-local Divider = Main:Divider{
-   Name = "Aimbot"
-}
-
-local VisualsTab = UI:Tab{Name = "Visuals"}
-local ESPTab = UI:Tab{Name = "ESP"}
-
--- Variáveis
-local AimingEnabled = true
-local FullBrightEnabled = false
-local DebugLineEnabled = true
-local ESPEnabled = true
-
--- Aimbot
-Main:Toggle{
-    Name = "Aimbot",
-    Default = AimingEnabled,
     Callback = function(val)
         AimingEnabled = val
     end
